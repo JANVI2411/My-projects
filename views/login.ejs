@@ -1,0 +1,361 @@
+<html>
+<style>
+
+.flex-container{
+  display:flex;
+  flex-wrap:wrap;
+  flex-flow:column;
+  background-color:red;
+  }
+.box{
+ flex-grow:2;
+ }
+
+
+.three{
+flex-basis:500px;
+background-color:#ddd;
+}
+.four{
+flex-basis:200px;
+background-color:#111;
+}
+
+
+
+
+.one {
+flex-basis:auto;
+background-color:#f44;
+}
+nav{
+position:fixed;
+width:98.5%;
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+z-index:1;
+}
+
+nav ul{
+list-style-type:none;
+display:flex;
+flex:1 0 0;
+flex-wrap:wrap;
+}
+
+nav li{
+font-size:32px;
+}
+nav a{
+text-decoration:none;
+font-size:17px;
+color:white;
+display:block;
+padding:7px;
+}
+nav a:hover{
+color:black;
+}
+nav ul.ul-end{
+justify-content:flex-end;
+}
+
+#sidebar{
+position: absolute;
+width:400px;
+height:650px;
+background-color:#111;
+top:74px;
+left:auto;
+background-image:url('npic5.jpg');
+background-repeat:no-repeat;
+background-size:100% 100%;
+transition:1s;
+}
+.black{
+position:absolute;
+width:400px;
+height:650px;
+opacity:0.7;
+background-color:black;
+transition:1s;
+}
+#sidebar.active{
+left:-350px;
+transition:1s;
+}
+#sidebar p{
+margin-left:10px;
+color:#fff;
+font-size:18px;
+}
+
+
+#right-side{
+width:auto;
+height:650px;
+background-color:#fff;
+
+margin-left:350px;
+margin-top:66px;
+transition:0.8s;
+}
+
+.push-btn span{
+position:absolute;
+}
+.push-btn span.one{
+display:block;
+transform:rotate(45deg);
+width:20px;
+height:3px;
+background-color:#fff;
+top:15px;
+right:5px;
+}
+.push-btn span.two{
+display:block;
+transform:rotate(-45deg);
+width:20px;
+height:3px;
+background-color:#fff;
+top:15px;
+right:5px;
+}
+.pull-btn{
+position:absolute;
+top:5px;
+right:-30px;
+}
+.pull-btn span{
+display:block;
+width:20px;
+height:3px;
+background-color:#111;
+margin:3px 0px;
+}
+#right-side{
+display:flex;
+flex-flow:column;
+justify-content:center;
+align-items:center;
+transition:0.8s;
+flex-wrap:wrap;
+background-image:linear-gradient(to right,#4f4);
+}
+
+
+
+.login-Box{
+border:2px solid #bbb;
+background-color:#fff;
+min-width:400px;
+box-shadow:10px 10px 5px black;
+}
+.login-Box.top{
+flex-basis:220px;
+display:block;
+margin-bottom:25px;
+display:flex;
+flex-flow:column;
+justify-content:space-between;
+}
+.b1{
+flex-basis:50px;
+display:flex;
+justify-content:center;
+}
+.b2{
+flex-basis:100px;
+display:block;
+display:flex;
+flex-direction:column;
+margin:0 5px;
+}
+.b2 input{
+display:block;
+}
+.b2 input:hover{
+border-bottom:1px solid #aaa;
+}
+
+.Input {
+flex-basis:20%;
+display:flex;
+flex-flow:column;
+justify-content:center;
+}
+.Input input{
+display:block;
+border:none;
+padding:7px;
+border-bottom:1px solid black;
+outline:none;
+margin:5px 0 0 0;
+}
+.submit{
+ flex-basis:5%;
+ display:block;
+ border:none;
+ padding:10px;
+ margin-bottom:5px;
+ background-color:#f44;
+ color:white;
+}
+
+
+.Login-Box.bottom{
+flex-basis:100px;
+
+display:flex;
+flex-flow:column;
+align-items:center;
+}
+
+
+
+footer{
+background-color:#111;
+height:auto;
+width:100%;
+}
+footer p{
+color:#ddd;
+margin-top:50px;
+margin-left:10px
+}
+@media(max-width:650px){
+#sidebar{
+display:none;
+}
+#right-side{
+margin-left:0px;
+margin-top:125px;
+}
+#right-side.login-Box{
+margin-left:25px;
+}
+nav ul.ul-start{
+ flex-grow:2;
+}
+nav ul.ul-end{
+  flex-flow:1;
+  flex-flow:column;
+  justify-content:flex-end;
+}
+
+}
+
+</style>
+<script>
+ function push(){
+  document.getElementById("sidebar").style.marginLeft="-400px";
+  document.getElementById("right-side").style.marginLeft="0px";
+ }
+ function pull(){
+  document.getElementById("sidebar").style.marginLeft="auto";
+  document.getElementById("right-side").style.marginLeft="400px";
+  }
+ function submit(){
+  document.getElementById("Input").style.borderColor="white";
+ }
+
+ </script>
+
+
+
+<div class="flex-container">
+<nav class="box one">
+  <ul class="ul-start">
+    <li>Find-a-Roof</li>
+  </ul>
+  <ul class="ul-end">
+
+	<li><a href="/">Home</a></li>
+    <li><a href="signup">SignUp</a></li>
+
+	<li><a href="#home">About us</a></li>
+  </ul>
+  </nav>
+</div>
+<main>
+
+<div id="sidebar" style="transition:0.8s">
+<div class="black">
+
+      <p style="font-size:30px;">Things you Can Do with
+      <br>Find-a-Roof Account</p>
+      <p># Post one Single <br>Property for FREE</p>
+      <p># Set property alerts <br>for your requirement</p>
+      <p># Get accessed by over<br> 1 Lakh buyers</p>
+      <p># Showcase your property<br> as Rental, PG or for Sale</p>
+      <p># Get instant queries <br>over Phone, Email and SMS</p>
+      <p># Performance in search &<br> Track responses & views online</p>
+      <p># Add detailed property <br>information & multiple photos per listing  </p>
+ </div>
+  <div class="push-btn" onclick="push()">
+    <span class="one"></span>
+	<span class="two"></span>
+  </div>
+  <div class="pull-btn" onclick="pull()">
+   <span></span>
+   <span></span>
+   <span></span>
+  </div>
+</div>
+<script>
+function loginError() {
+  var txt = "";
+  var x=document.forms["login"]["email"].value;
+  if(x==""){
+     txt="email-id must be required";
+    document.getElementById("email-error").innerHTML = txt;
+  }
+
+  if (document.getElementById("id1").validity.tooLong) {
+    txt = "Password must be larger than 8 character and smaller than 16 character";
+  }
+
+}
+</script>
+
+<div id="right-side">
+<div class="login-Box top">
+
+    <div class="b1">
+    <h2>Login</h2>
+    </div>
+    <div>
+       <form  class="b2" name="login" action="/login" method="POST">
+          <div class="Input">
+		    <input type="text" name="email" placeholder="Email-Id" ></input>
+            <p id="email-error"></P>
+		    <input id="id1" name="pw" maxlength="16" type="password" placeholder="Password"></input>
+            <p></P>
+		  </div>
+
+		  <input class="submit" onclick="loginError()"  value="Login" type="submit"></input>
+        </form>
+   </div>
+</div>
+<div class="login-Box bottom">
+
+</div>
+</div>
+</main>
+<footer>
+<br>
+<p><span style="font-size:20px;color:#fff">Find-a-Roof.com </span>is India's No 1 Property portal and has been adjudged as the most preferred property site in India, by independent surveys. The portal provides a platform for property buyers and sellers to locate properties of interest and source
+   information on the real estate space in a transparent and unambiguous manner.
+</P>
+<p># Find-a-Roof Essentials
+ <br># Sell/Rent Property
+ <br># Advertise with Us
+<br># Advertisers Support
+<br># Real Estate Developers
+<br><br>
+</p>
+   </footer>
+
+</html>

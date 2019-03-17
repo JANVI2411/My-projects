@@ -1,0 +1,116 @@
+<html>
+<style>
+
+.flex-container{
+  display:flex;
+  flex-wrap:wrap;
+  flex-flow:column;
+  background-color:red;
+  }
+.box{
+ flex-grow:1;
+ }
+.one {
+flex-basis:auto;
+background-color:#f44;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+}
+
+nav ul{
+list-style-type:none;
+display:flex;
+flex:1 0 0;
+flex-wrap:wrap;
+}
+
+nav li{
+font-size:30px;
+
+}
+nav a{
+text-decoration:none;
+font-size:15px;
+color:white;
+display:block;
+padding:7px;
+}
+nav a:hover{
+color:black;
+}
+nav ul.ul-end{
+justify-content:flex-end;
+}
+
+
+
+.two{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+flex-basis:100px;
+background-color:#b6ffb9;
+}
+.search-bar{
+justify-content:center;
+align-items:center;
+display:flex;
+flex-wrap:wrap;
+}
+
+.search-bar input{
+padding:10px;
+outline:none;
+border:1px solid #fff;
+border-radius:20px;
+}
+input.submit{
+border:5px solid #bbb;
+background:white;
+border:45px;
+}
+
+.three{
+display:flex;
+background-color:#b6ffb9;
+justify-content:center;
+align-items:center;
+height:800px;
+width:100%;
+}
+
+</style>
+
+<div class="flex-container">
+
+<nav class="box one">
+  <ul>
+    <li>Find-a-Roof</li>
+  </ul>
+  <ul class="ul-end">
+    <li><a href="/">Home</a></li>
+   	<li><a href="/login">Login</a></li>
+    <li><a href="#">SignUp</a></li>
+	  <li><a href="/post">Post Property</a></li>
+  	<li><a href="#">About us</a></li>
+  </ul>
+</nav>
+
+<div class="box two">
+  <form class="search-bar">
+   <input placeholder="Area" name="Area"> </input>
+   <input placeholder="Range" name="Rnage"> </input>
+   <input placeholder="Type of Property" name="Type"> </input>
+   <input type="submit" value="GO" class="submit"></input>
+  </form>
+</div>
+<div class="box three">
+
+</div>
+
+</div>
+</html>

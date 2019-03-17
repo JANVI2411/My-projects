@@ -1,0 +1,185 @@
+<html>
+
+<style>
+
+.flex-container{
+  display:flex;
+  flex-wrap:wrap;
+  flex-flow:column;
+  background-color:red;
+  align-items:space-between;
+  }
+.box{
+ flex-grow:1;
+ }
+
+
+.one {
+flex-basis:auto;
+background-color:#f44;
+}
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+}
+
+nav ul{
+list-style-type:none;
+display:flex;
+flex:1 0 0;
+flex-wrap:wrap;
+}
+
+nav li{
+font-size:30px;
+
+}
+nav a{
+text-decoration:none;
+font-size:15px;
+color:white;
+display:block;
+padding:7px;
+}
+nav a:hover{
+color:black;
+}
+nav ul.ul-end{
+justify-content:flex-end;
+}
+
+
+
+.two{
+display:flex;
+justify-content:space-around;
+flex-basis:800px;
+flex-wrap:wrap;
+background-image:url('npic5.jpg');
+background-repeat:no-repeat;
+background-size:100% 100%;
+//background-image:linear-gradient(black,red);
+}
+.two input{
+display:block;
+padding:5px;
+color:white;
+}
+.black{
+display:flex;
+opacity:0.7;
+background-color:black;
+width:80%;
+justify-content:space-around;
+}
+.pro-detail{
+color:white;
+font-size:20px;
+display:flex;
+flex-flow:column;
+justify-content:space-around;
+}
+.pro-detail input{
+  padding:10px;
+border:2px solid white;
+border-radius:20px;
+outline:none;
+background:none;
+width:400px;
+}
+.pro-detail p{
+text-align:center;
+font-size:25px;
+color:#fff;
+}
+main{
+
+}
+
+
+footer{
+background-color:#111;
+height:auto;
+width:100%;
+}
+footer p{
+color:#ddd;
+margin-left:10px
+}
+.image{
+  width:350px;
+  height: 20px;
+}
+input.submit{
+  margin-top:15px;
+  width: 100px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  margin-left: 150px;
+}
+@media(max-width:650px){
+
+  input.submit{
+  margin-left:0px;
+  }
+.one{
+
+
+}
+.pro-detail input{
+width:200px;
+}
+.pro-detail{
+justify-content:space-around;
+align-items:center;
+}
+}
+</style>
+<div class="flex-container">
+
+<nav class="box one" class="one1">
+  <ul>
+    <li>Find-a-Roof</li>
+  </ul>
+  <ul class="ul-end">
+   	<li><a href="/">Home</a></li>
+  	<li><a href="/login">Login</a></li>
+    <li><a href="#home">SignUp</a></li>
+  	<li><a href="#home">About us</a></li>
+  </ul>
+</nav>
+
+<main class="box two">
+<div class="black">
+<form class="pro-detail" method="POST" action="/post">
+ <p><bl>Post Property</bl></p>
+ Name:<input type="text" name="name"></input>
+ Type of property:<input type="text" name="type"></input>
+ Area:<input type="text" name="area"></input>
+ Price:<input type="text" name="price"></input>
+ Phone No:<input type="text" name="phone"></input>
+ Discription:<input type="text" name="Discription"></input>
+ photo:<input class="image" type="image" name="photo"></input>
+ <input class="submit" type="submit"></input>
+</form>
+</div>
+</main>
+
+<footer>
+<br>
+<p><span style="font-size:20px;color:#fff">Find-a-Roof.com </span>is India's No 1 Property portal and has been adjudged as the most preferred property site in India, by independent surveys. The portal provides a platform for property buyers and sellers to locate properties of interest and source
+   information on the real estate space in a transparent and unambiguous manner.
+</P>
+<p># Find-a-Roof Essentials
+ <br># Sell/Rent Property
+ <br># Advertise with Us
+<br># Advertisers Support
+<br># Real Estate Developers
+<br><br>
+</p>
+   </footer>
+</div>
+
+</html>

@@ -1,0 +1,182 @@
+<html>
+<style>
+
+.flex-container{
+  display:flex;
+  flex-wrap:wrap;
+  flex-flow:column;
+  background-color:red;
+  }
+.box{
+ flex-grow:1;
+ }
+
+
+.three{
+flex-basis:500px;
+background-color:#ddd;
+}
+.four{
+flex-basis:200px;
+background-color:#111;
+}
+
+
+
+
+.one {
+flex-basis:auto;
+background-color:#f44;
+}
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+}
+
+nav ul{
+list-style-type:none;
+display:flex;
+flex:1 0 0;
+flex-wrap:wrap;
+}
+
+nav li{
+font-size:30px;
+
+}
+nav a{
+text-decoration:none;
+font-size:15px;
+color:white;
+display:block;
+padding:7px;
+}
+nav a:hover{
+color:black;
+}
+nav ul.ul-end{
+justify-content:flex-end;
+}
+
+.pic{
+  background-image:url('npic1.jpg');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+}
+
+.two{
+flex-grow: 1;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap: wrap;
+flex-basis:400px;
+}
+.Input{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap: wrap;
+  flex-basis:600px;
+}
+input{
+flex-basis:200px;
+display:block;
+border:1px solid #fff;
+border-radius: 20px;
+padding:10px;
+background:#fff;
+outline:none;
+}
+input.submit{
+flex-basis:50px;
+font-size:25px;
+border:2px solid #bbb;
+background:white;
+border-radius:50px;
+}
+input:hover{
+  border:3px solid #fff;
+  background-color:#fff;
+}
+input.submit:hover{
+  border:3px solid #fff;
+}
+
+
+
+
+
+main{
+
+}
+
+
+footer{
+background-color:#111;
+height:auto;
+width:100%;
+}
+footer p{
+color:#ddd;
+margin-top:50px;
+margin-left:10px
+}
+@media(max-width:650px) {
+  input{
+    margin:5px;
+  }
+  nav ul.ul-start{
+   flex-grow:2;
+  }
+  nav ul.ul-end{
+    flex-flow:1;
+    flex-flow:column;
+    justify-content:flex-end;
+  }
+</style>
+<div class="flex-container">
+
+<nav class="box one">
+  <ul class="ul-start">
+    <li>Find-a-Roof</li>
+  </ul>
+  <ul class="ul-end">
+
+	<li><a href="/login">Login</a></li>
+    <li><a href="/signup">SignUp</a></li>
+	<li><a href="#home">About us</a></li>
+  </ul>
+</nav>
+<div class="box two pic">
+ <form  class="two" method="POST" action="/">
+   <div class="Input">
+   <input type="text" placeholder="Area" name="Area"required >
+   <input type="text" placeholder="Range" name="Range"required >
+   <input type="text" placeholder="Type" name="Type"required>
+   </div>
+   <input class="submit" type="submit" value="GO" >
+</form>
+</div>
+<main class="box three">
+
+</main>
+
+<footer class="box four">
+
+  <br>
+  <p><span style="font-size:20px;color:#fff">Find-a-Roof.com </span>is India's No 1 Property portal and has been adjudged as the most preferred property site in India, by independent surveys. The portal provides a platform for property buyers and sellers to locate properties of interest and source
+     information on the real estate space in a transparent and unambiguous manner.
+  </P>
+  <p># Find-a-Roof Essentials
+   <br># Sell/Rent Property
+   <br># Advertise with Us
+  <br># Advertisers Support
+  <br># Real Estate Developers
+  <br><br>
+  </p>
+
+</footer>
+</div>
+</html>
